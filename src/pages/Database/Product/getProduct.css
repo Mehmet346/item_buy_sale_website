@@ -1,0 +1,47 @@
+.getProduct {
+  margin-top: 30px;
+  margin-right: 30px;
+    display: flex;
+    align-items: left;
+    justify-content:left;
+    flex-direction: row;
+  }
+  
+  .getProduct__container {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-color: #dcdcdc;
+    padding: 30px;
+  }
+  header {
+    padding: 1rem 0;
+  }
+  
+  .main-content {
+    margin-top: 2rem;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+  
+  .product-detail {
+    padding: 0 2rem;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    font-size: 140%;
+  }
+
+  input{
+    width: 100%;
+  }
+
+  select{
+    width: 100%;
+  }
