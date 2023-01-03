@@ -1,30 +1,33 @@
-import React from 'react'
-import { LogRegBtn, LoginWith, WithEmail, Register, UserPanel, SearchBar, ServerList } from '../'
+import React, { useContext } from 'react'
+import { UserPanel, SearchBar, ServerList, Login, UserInformation } from '../'
+import { useEffect } from 'react';
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Button } from '@mui/material';
+import { Store } from '../../app/store';
 
 function Left() {
-  const IsLogged = (false);
 
-  let amount = 5;
+  const { auth, logout } = useContext(Store)
+  const [user, loading] = useAuthState(auth);
+
+  useEffect(() => {
+    if (loading) return;
+
+  }, [loading]);
 
   return (
-    <div className="w-[35%] hidden inset-0 max-h-screen lg:block px-5 py-5 overflow-y-scroll ">
-      <div className="flex w-full inset-0 items-center justify-center">
-        <div className="my-3 ml-0.5 p-3 w-[80%] border rounded-lg border-[#e8e8e8] bg-[#f8f8f8]">
-          {IsLogged === false ? <LogRegBtn /> : null}
-          <LoginWith 
-          amount = {amount}
-          />
-          <WithEmail />
-          <Register />
-        </div>
+    <div className="hidden max-h-screen lg:block px-2 py-5 overflow-y-scroll ">
+      <div className="w-[300px] justify-center flex flex-col">
+        {!user ? <Login /> :
+          <Button onClick={logout} variant="outlined">Logout</Button>
+        }
       </div>
 
       <nav id="nav" className="lg:text-sm lg:leading-6 relative ">
-        <ul className="ml-5">
-          <UserPanel />
-          <SearchBar />
-          <ServerList />
-        </ul>
+        {user && <UserInformation />}
+        {user && <UserPanel />}
+        <SearchBar />
+        <ServerList />
       </nav>
     </div>
   )

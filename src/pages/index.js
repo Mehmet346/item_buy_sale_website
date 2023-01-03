@@ -1,2 +1,6 @@
-export { default as MyItems } from "./myitems/MyItems"
+export { default as MyItems } from "./my_items/MyItems"
 export { default as Profile } from "./profile/Profile"
+export { default as Dashboard } from "./dashboard/Dashboard"
+export { default as AddItems } from "./add_items/AddItems"
+export { default as SoldItems } from "./sold_items/SoldItems"
+export { default as BoughtItems } from "./bought_items/BoughtItems"

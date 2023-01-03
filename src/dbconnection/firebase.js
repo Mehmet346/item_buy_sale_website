@@ -20,13 +20,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBpH6KRbU8VY6HMchnY51Pd_NMMKuRMWfI",
-  authDomain: "login-e1fe8.firebaseapp.com",
-  projectId: "login-e1fe8",
-  storageBucket: "login-e1fe8.appspot.com",
-  messagingSenderId: "568919810340",
-  appId: "1:568919810340:web:d657d3405fe6c1b30d13b1",
-  measurementId: "G-ZQL0993JWR"
+  apiKey: "AIzaSyCYUkNcjMXoHQ8EJbeuP9ojpXUknamRHLA",
+  authDomain: "amzn-clone-69386.firebaseapp.com",
+  projectId: "amzn-clone-69386",
+  storageBucket: "amzn-clone-69386.appspot.com",
+  messagingSenderId: "1031662681007",
+  appId: "1:1031662681007:web:9a1a6f94922178acedcd5a"
 };
 
 const app = initializeApp(firebaseConfig);
